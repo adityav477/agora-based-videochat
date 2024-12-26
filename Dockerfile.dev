@@ -1,0 +1,15 @@
+FROM node:23-alpine as base
+WORKDIR ./web
+COPY ./package*.json   ./
+RUN npm i 
+ARG NEXT_PUBLIC_AGORA_API_KEY
+ENV NEXT_PUBLIC_AGORA_API_KEY=${NEXT_PUBLIC_AGORA_API_KEY}
+
+FROM base AS build
+COPY . .
+RUN npm run build
+EXPOSE 3000
+CMD ["npm","run","start"]
+
+
+

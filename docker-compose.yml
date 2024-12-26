@@ -1,0 +1,10 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile.prod  
+      target: prodstage2
+      args: 
+       NEXT_PUBLIC_AGORA_API_KEY: <your app id>
+    ports:
+      - "3000:3000"

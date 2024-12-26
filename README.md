@@ -62,6 +62,20 @@ This application is built using the Agora RTC SDK to enable real-time video and 
 
 ---
 
+## Visit App
+
+URL -> <https://agora-based-videochat.vercel.app/>
+
+---
+
+## Docker Install
+
+1. In the root folder
+
+  ```sh
+    docker compose up --build
+  ```
+
 ## Usage
 
 ### Joining a Channel
